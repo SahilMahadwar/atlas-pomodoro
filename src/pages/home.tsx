@@ -1,7 +1,12 @@
-export const HomePage = () => {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
-  );
-};
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+export function HomePage() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/pomodoro");
+  }, [navigate]);
+
+  return null;
+}
